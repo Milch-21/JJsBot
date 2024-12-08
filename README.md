@@ -1,3 +1,5 @@
 # JJsBot - Roblox
 
-By Milch_21
+## Requirements:
+- pynput
+- python 3
