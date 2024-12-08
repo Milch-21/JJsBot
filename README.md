@@ -4,6 +4,7 @@
 - pynput
 - python 3
 
+## Install Guide
 To install the required content, please follow those instructions:
 
 **Python 3 Installation:**
