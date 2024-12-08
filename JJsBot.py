@@ -6,7 +6,7 @@ import time
 list = {}
 
 for i in range(1, 501):
-    list[i] = num2words(i).upper()
+    list[i] = num2words(i).upper().replace("-", " ")
 
 max = input("How many JJs would you like to do? ")
 max = int(max)
@@ -19,20 +19,22 @@ def Check():
 
     while n <= max:
         if n in list:
-            time.sleep(0.25)
+            time.sleep(0.125)
 
             keyboard_controller.press("/")
-            time.sleep(0.5)
+            time.sleep(0.1)
 
-            for letter in list[n]:
-                keyboard_controller.press(letter)
-                time.sleep(0.1)
+            #for letter in list[n]:
+            #    keyboard_controller.press(letter)
+            #    time.sleep(0.000005)
+
+            keyboard_controller.type(list[n])
 
             time.sleep(0.1)
             keyboard_controller.press(keyboard.Key.enter)
             time.sleep(0.25)
             keyboard_controller.press(keyboard.Key.space)
-            time.sleep(.1)
+            time.sleep(0.25)
             keyboard_controller.release(keyboard.Key.space)
 
             n = n + 1
